@@ -1,8 +1,8 @@
-import tkinter
-import customtkinter
-from pytube import YouTube
+import tkinter # pip install tk
+import customtkinter # pip install customtkinter==0.3
+from pytube import YouTube # pip install pytube | pip install pytube3
 
-
+# Start download function
 def startdownload():
     try:
         ytlink = link.get()
@@ -15,7 +15,8 @@ def startdownload():
         finishlabel.configure(text="Download Complete",text_color="green")
     except:
         finishlabel.configure(text="Invalid URL", text_color="red")
-
+        
+# Reset function
 def reset_download():
     link.delete(0, tkinter.END)
     title.configure(text="")
